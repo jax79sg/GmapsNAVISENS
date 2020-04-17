@@ -13,6 +13,16 @@ To use NAVISENS, you need the license key. Please change this line in sg.gov.dh.
 private static final String DEVELOPER_KEY = "PLEASE ENTER LICENSE KEY HERE";
 ```
 
+To run this sample app, you will need a Googel API key for Maps SDK to work. I will leave my API key active for 2 weeks before i revoke it. This should give you enough time to play with this simple app if needed. Otherwise, you can generate your own key and insert as follows.
+```xml
+//res/values/google_maps_api.xml
+<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">SOME API KEY</string>
+
+//Android.manifest
+<meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+```
+
 Please ensure that the following dependancies are given to the app
 ```java
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
