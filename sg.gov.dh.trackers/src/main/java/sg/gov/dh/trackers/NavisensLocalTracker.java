@@ -42,7 +42,7 @@ public class NavisensLocalTracker implements MotionDnaInterface, Tracker {
     /**
      * Do not change this.
      */
-    private static final String DEVELOPER_KEY = "zcNcv8YYUYgvhgNrMZZzPNEQbcV9nAxlHhNPA9i9yNQyOmnBiveny6ZVJs6Hgsnr";
+    private static final String DEVELOPER_KEY = "PLEASE ENTER LICENSE KEY HERE";
 
     /**
      * For logging purposes only
@@ -301,7 +301,7 @@ public class NavisensLocalTracker implements MotionDnaInterface, Tracker {
 
         Log.i(TAG,"X:"+currentLocalX + " Y:"+currentLocalY + " Z:"+mapHeight + " Heading:" + currentLocalBearing + " locStatus:"+ locStatus + "VerticalMotion:" + verticalMotion + " EstimatedMotion:" + motionType);
         Log.i(TAG,"Lat:"+currentGlobalLat + " Y:"+currentGlobalLong + " Z:"+currentGlobalAlt + " Heading:" + currentGlobalBearing + " locStatus:"+ locStatus + "VerticalMotion:" + verticalMotion + " EstimatedMotion:" + motionType);
-        Coords coords= new Coords(this.currentGlobalLat, this.currentGlobalLong, this.currentGlobalAlt, this.currentGlobalAltUncertainty, this.currentGlobalBearing, (float)loc.uncertainty.x,(float)loc.uncertainty.y, (float)loc.absoluteAltitudeUncertainty, currentLocalX, currentLocalY,mapHeight, currentLocalBearing, motionType, locStatus);
+        Coords coords= new Coords(this.currentGlobalLat, this.currentGlobalLong, this.currentGlobalAlt, this.currentGlobalAltUncertainty, this.currentGlobalBearing, (float)loc.uncertainty.x,(float)loc.uncertainty.y, (float)loc.absoluteAltitudeUncertainty, currentLocalX, currentLocalY,mapHeight, currentLocalBearing, motionType, verticalMotion);
         listener.onNewCoords(coords);
 
     }
