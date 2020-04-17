@@ -1,0 +1,2 @@
+rootProject.name='GmapsNAVISENS'
+include ':app', ':sg.gov.dh.utils', ':sg.gov.dh.trackers'
