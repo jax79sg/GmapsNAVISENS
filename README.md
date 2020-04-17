@@ -39,8 +39,8 @@ To initialise the NAVISENS tracker in your main activity
                 Log.d(TAG,"Heading:"+coords.getGlobalBearing());
 
                 //E.g. Receive current action
-                Log.d(TAG,"X:"+coords.getAction());
-                Log.d(TAG,"Y:"+coords.getVerticalAction());
+                Log.d(TAG,"X:"+coords.getAction()); //Example, FORWARD, FIDGETING, STATIONARY
+                Log.d(TAG,"Y:"+coords.getVerticalAction()); //Example, VERTICAL_STATUS_STAIRS_UP, VERTICAL_STATUS_STAIRS_DOWN
 
                 //Do whatever you want with the above
                 //E.g. Using the coordinates to plot, using the actions to show animation...etc.
@@ -60,7 +60,6 @@ To initialise the NAVISENS tracker in your main activity
 ```
 Next, you need to give the tracker a location. If you give it a xy, it will initialise as a local cartesian tracker. If you give latlong, it will be global. The code in this repo does the latter by long press a position on the map.
 ```java
-
 Coords coord = new Coords(....)
 tracker.setManualLocation(coords);
 ```
