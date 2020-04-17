@@ -8,6 +8,10 @@ implementation  project(path: ':sg.gov.dh.utils')
 implementation  project(path: ':sg.gov.dh.trackers')
 implementation 'com.navisens:motiondnaapi:1.9.2'
 ```
+To use NAVISENS, you need the license key. Please change this line in sg.gov.dh.trackers.NavisensLocalTracker.java and enter the key which i will send to you separately.
+```java
+private static final String DEVELOPER_KEY = "PLEASE ENTER LICENSE KEY HERE";
+```
 
 Please ensure that the following dependancies are given to the app
 ```java
